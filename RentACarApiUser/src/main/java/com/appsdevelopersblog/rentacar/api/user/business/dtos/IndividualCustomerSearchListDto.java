@@ -1,4 +1,4 @@
-package com.appsdevelopersblog.rentacar.api.user.dtos;
+package com.appsdevelopersblog.rentacar.api.user.business.dtos;
 
 import java.time.LocalDate;
 

@@ -10,7 +10,7 @@ import com.appsdevelopersblog.rentacar.api.user.business.requests.corporateCusto
 import com.appsdevelopersblog.rentacar.api.user.business.requests.corporateCustomerRequests.UpdateCorporateCustomerRequest;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.DataResult;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.Result;
-import com.appsdevelopersblog.rentacar.api.user.dtos.CorporateCustomerSearchListDto;
+import com.appsdevelopersblog.rentacar.api.user.business.dtos.CorporateCustomerSearchListDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

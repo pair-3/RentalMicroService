@@ -2,7 +2,7 @@ package com.appsdevelopersblog.rentacar.api.user.business.concretes;
 
 import com.appsdevelopersblog.rentacar.api.user.business.abstracts.UserService;
 import com.appsdevelopersblog.rentacar.api.user.business.requests.UserRequests.LoginUserRequest;
-import com.appsdevelopersblog.rentacar.api.user.constants.Messages;
+import com.appsdevelopersblog.rentacar.api.user.business.constants.Messages;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.business.BusinessRules;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.mapping.ModelMapperService;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.ErrorResult;

@@ -1,4 +1,4 @@
-package com.appsdevelopersblog.rentacar.api.user.constants;
+package com.appsdevelopersblog.rentacar.api.user.business.constants;
 
 public class Messages {
     public static final String CUSTOMERADD = "Customer added.";

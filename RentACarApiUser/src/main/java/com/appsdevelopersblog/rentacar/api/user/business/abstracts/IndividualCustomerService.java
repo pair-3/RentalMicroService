@@ -7,7 +7,7 @@ import com.appsdevelopersblog.rentacar.api.user.business.requests.individualRequ
 import com.appsdevelopersblog.rentacar.api.user.business.requests.individualRequests.UpdateIndividualCustomerRequest;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.DataResult;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.Result;
-import com.appsdevelopersblog.rentacar.api.user.dtos.IndividualCustomerSearchListDto;
+import com.appsdevelopersblog.rentacar.api.user.business.dtos.IndividualCustomerSearchListDto;
 
 public interface IndividualCustomerService {
 	DataResult<List<IndividualCustomerSearchListDto>> getAll();

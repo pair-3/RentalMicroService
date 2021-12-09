@@ -5,7 +5,7 @@ import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.Result;
 import com.appsdevelopersblog.rentacar.api.user.business.requests.corporateCustomerRequests.CreateCorporateCustomerRequest;
 import com.appsdevelopersblog.rentacar.api.user.business.requests.corporateCustomerRequests.DeleteCorporateCustomerRequest;
 import com.appsdevelopersblog.rentacar.api.user.business.requests.corporateCustomerRequests.UpdateCorporateCustomerRequest;
-import com.appsdevelopersblog.rentacar.api.user.dtos.CorporateCustomerSearchListDto;
+import com.appsdevelopersblog.rentacar.api.user.business.dtos.CorporateCustomerSearchListDto;
 
 import java.util.List;
 
