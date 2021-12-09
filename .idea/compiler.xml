@@ -11,12 +11,14 @@
         <module name="RentACarDiscoveryService" />
         <module name="RentACarApiInvoice" />
         <module name="ApiGateWay" />
+        <module name="RentACarApiUser" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ApiGateWay" target="11" />
       <module name="RenACarApiRental" target="11" />
       <module name="RentACarApiInvoice" target="11" />
+      <module name="RentACarApiUser" target="11" />
       <module name="RentACarDiscoveryService" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -25,6 +27,7 @@
       <module name="ApiGateWay" options="-parameters" />
       <module name="RenACarApiRental" options="-parameters" />
       <module name="RentACarApiInvoice" options="-parameters" />
+      <module name="RentACarApiUser" options="-parameters" />
       <module name="RentACarDiscoveryService" options="-parameters" />
     </option>
   </component>

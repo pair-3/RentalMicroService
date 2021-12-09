@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/ApiGateWay/pom.xml" />
         <option value="$PROJECT_DIR$/RentACarApiInvoice/pom.xml" />
         <option value="$PROJECT_DIR$/RenACarApiRental/pom.xml" />
+        <option value="$PROJECT_DIR$/RentACarApiUser/pom.xml" />
       </list>
     </option>
   </component>
