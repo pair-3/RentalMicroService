@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "customers")
-public class Customer extends  User {
+public class Customer extends UserEntity {
 
 }

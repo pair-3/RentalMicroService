@@ -9,10 +9,16 @@ import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.ErrorResu
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.Result;
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.SuccessResult;
 import com.appsdevelopersblog.rentacar.api.user.dataAccess.abstracts.UserDao;
+import com.appsdevelopersblog.rentacar.api.user.entities.UserEntity;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 
 
 @Service
@@ -65,4 +71,24 @@ public class UserManager implements UserService {
 		}
 		return new SuccessResult();
 	}
-}
+
+	@Override
+	public UserEntity getByEmail(String email) {
+		UserEntity userEntity  = this.userDao.getByEmail(email);
+		if (userEntity == null){
+			throw new UsernameNotFoundException(email);
+		}
+		return userEntity;
+	}
+
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+			UserEntity userEntity = this.userDao.getByEmail(username);
+			if (userEntity == null){
+				throw new UsernameNotFoundException(username);
+			}
+			return new User(userEntity.getEmail(),userEntity.getEncryptedPassword(), true, true, true, true, new ArrayList<>());
+		}
+	}
+

@@ -22,10 +22,10 @@ public class UsersController {
 	}
 
 
-	@PostMapping("login")
+	/*@PostMapping("login")
 	public Result login(@RequestBody LoginUserRequest loginUserRequest){
 		return this.userService.login(loginUserRequest);
-	}
+	}*/
 	
 	
 	
