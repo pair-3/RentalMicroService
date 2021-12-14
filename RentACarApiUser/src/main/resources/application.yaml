@@ -27,3 +27,9 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 gateway:
   ip: "localhost"
+login:
+  url:
+    path: "/users/login"
+token:
+  expiration: 864000000
+  secret: mysupersecretkeymysupersecretkeymysupersecretkey
