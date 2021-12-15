@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class DeleteCorporateCustomerRequest {
 
 	@NotNull
-	private String customerId;
+	private String id;
 }
