@@ -43,7 +43,7 @@ public class CorporateCustomersController {
 		return this.corporateCustomerService.update(updateCorporateCustomerRequest);
 	}
 	@DeleteMapping("/delete")
-	public Result delete(@RequestParam("customerId") String customerId){
+	public Result delete(@RequestBody String customerId){
 		DeleteCorporateCustomerRequest deleteCorporateCustomerRequest=new DeleteCorporateCustomerRequest();
 		deleteCorporateCustomerRequest.setCustomerId(customerId);
 		return this.corporateCustomerService.delete(deleteCorporateCustomerRequest);

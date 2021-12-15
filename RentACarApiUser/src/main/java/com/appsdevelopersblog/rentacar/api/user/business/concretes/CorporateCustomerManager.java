@@ -65,8 +65,7 @@ public class CorporateCustomerManager implements CorporateCustomerService {
 
 	@Override
 	public Result update(UpdateCorporateCustomerRequest updateCorporateCustomerRequest) {
-		Result result = BusinessRules.run(checkCorporateCustomerExistsBuId(updateCorporateCustomerRequest.getId()),checkCorporateTaxNumberExists(updateCorporateCustomerRequest.getTaxNumber()),
-				checkIsCorporateCustomerEmailExists(updateCorporateCustomerRequest.getEmail()));
+		Result result = BusinessRules.run(checkCorporateCustomerExistsBuId(updateCorporateCustomerRequest.getId()));
 		if (result != null) {
 			return result;
 		}

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class IndividualCustomerSearchListDto {
 	
-	private int id;
+	private String id;
 	private String firstName;
 	private String lastName;
 	private LocalDate birthdate;
