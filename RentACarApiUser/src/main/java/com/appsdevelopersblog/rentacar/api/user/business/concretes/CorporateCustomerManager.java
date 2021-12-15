@@ -77,10 +77,10 @@ public class CorporateCustomerManager implements CorporateCustomerService {
 
 	@Override
 	public Result delete(DeleteCorporateCustomerRequest deleteCorporateCustomerRequest) {
-//		Result result = BusinessRules.run(checkCorporateCustomerExistsBuId(deleteCorporateCustomerRequest.getCustomerId()));
-//		if (result != null) {
-//			return result;
-//		}
+		Result result = BusinessRules.run(checkCorporateCustomerExistsBuId(deleteCorporateCustomerRequest.getCustomerId()));
+		if (result != null) {
+			return result;
+		}
 		CorporateCustomer corporateCustomer = modelMapperService.forRequest().map(deleteCorporateCustomerRequest,
 				CorporateCustomer.class);
 		this.corporateCustomerDao.delete(corporateCustomer);
