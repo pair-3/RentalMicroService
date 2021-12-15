@@ -12,14 +12,7 @@ import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.DataResul
 import com.appsdevelopersblog.rentacar.api.user.core.utilities.results.Result;
 import com.appsdevelopersblog.rentacar.api.user.business.dtos.IndividualCustomerSearchListDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -55,7 +48,7 @@ public class IndividualCustomersController {
 	}
 
 	@GetMapping("/getByIndividualCustomerById")
-	public DataResult<IndividualCustomerSearchListDto> getByIndividualCustomerById(String id) {
+	public DataResult<IndividualCustomerSearchListDto> getByIndividualCustomerById(@RequestParam("id") String id) {
 		return this.individualCustomerService.getByIndividualCustomerId(id);
 	}
 

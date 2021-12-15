@@ -70,10 +70,11 @@ public class IndividualCustomerManager implements IndividualCustomerService {
 
 	@Override
 	public Result update(UpdateIndividualCustomerRequest updateIndividualRequest) {
-		Result result = BusinessRules.run(checkIsIndividualCustomerExists(updateIndividualRequest.getId()),checkIsIndividualCustomerEmailExists(updateIndividualRequest.getEmail()));
+		Result result = BusinessRules.run(checkIsIndividualCustomerExists(updateIndividualRequest.getId()));
 		if(result != null){
 			return result;
 		}
+		updateIndividualRequest.setEncryptedPassword(bCryptPasswordEncoder.encode(updateIndividualRequest.getPassword()));
 		IndividualCustomer individualCustomer=modelMapperService.forRequest().map(updateIndividualRequest, IndividualCustomer.class);
 		this.individualCustomerDao.save(individualCustomer);
 		return new SuccessResult(Messages.CUSTOMERUPDATE);

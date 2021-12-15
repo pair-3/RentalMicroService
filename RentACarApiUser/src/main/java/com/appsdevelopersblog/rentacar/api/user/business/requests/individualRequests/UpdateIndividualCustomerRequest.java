@@ -44,4 +44,7 @@ public class UpdateIndividualCustomerRequest {
 	@NotNull
 	private LocalDate birthdate;
 
+	@JsonIgnore
+	private String encryptedPassword;
+
 }
